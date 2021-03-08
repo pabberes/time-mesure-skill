@@ -41,7 +41,7 @@ class HelloWorldSkill(MycroftSkill):
         """ This is an Adapt intent handler, it is triggered by a keyword."""
         self.speak_dialog("welcome")
         tiempo_final_thanks = time()
-        self.log.info("El tiempo de respuesta ha sido = {}".format(tiempo_final_thanks-tiempo_inicial_thanks))
+        self.log.error("El tiempo de respuesta ha sido = {}".format(tiempo_final_thanks-tiempo_inicial_thanks))
 
 
     @intent_handler('HowAreYou.intent')
@@ -51,7 +51,7 @@ class HelloWorldSkill(MycroftSkill):
         tiempo_inicial_HowAreYou = time()
         self.speak_dialog("how.are.you")
         tiempo_final_HowAreYou = time()
-        self.log.info("El tiempo de respuesta ha sido = {}".format(tiempo_final_HowAreYou-tiempo_inicial_HowAreYou))
+        self.log.error("El tiempo de respuesta ha sido = {}".format(tiempo_final_HowAreYou-tiempo_inicial_HowAreYou))
 
     @intent_handler(IntentBuilder('HelloWorldIntent')
                     .require('HelloWorldKeyword'))
